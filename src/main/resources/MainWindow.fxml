@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.suleiman.weather.Controller">
+   <children>
+      <Region layoutX="57.0" layoutY="51.0" prefHeight="46.0" prefWidth="1280.0" style="-fx-background-color: #68738a;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+
+      <Label fx:id="cityName" alignment="CENTER" contentDisplay="CENTER" layoutY="66.0" prefHeight="38.0" prefWidth="1280.0" text="Amman" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+
+      <ImageView fx:id="mainWeatherIcon" fitHeight="100" fitWidth="100" layoutX="525.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/weather/01d.png" />
+         </image>
+      </ImageView>
+
+      <Label fx:id="degree" alignment="CENTER" contentDisplay="CENTER" layoutX="635.0" layoutY="98.0" text="0°" textAlignment="CENTER">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+
+
+      <!--   Daily   -->
+      <HBox layoutX="244.0" layoutY="310.0" prefHeight="100.0" prefWidth="829.0">
+         <children>
+      
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day1" text="day" />
+                        <Label fx:id="date1" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_01" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="degreeDay1" text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="degreeNight1" alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day2" text="day" />
+                        <Label fx:id="date2" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_02" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/02d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day3" text="day" />
+                        <Label fx:id="date3" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_03" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day4" text="day" />
+                        <Label fx:id="date4" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_04" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day5" text="day" />
+                        <Label fx:id="date5" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_05" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day6" text="day" />
+                        <Label fx:id="date6" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_06" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day7" text="day" />
+                        <Label fx:id="date7" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_07" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day8" text="day" />
+                        <Label fx:id="date8" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_08" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <HBox prefHeight="19.0" prefWidth="90.0">
+                     <children>
+                        <Label fx:id="day9" text="day" />
+                        <Label fx:id="date9" text="date">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ImageView fx:id="imageForecastDays_09" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+
+      <!--   Hourly   -->
+      <HBox layoutX="244.0" layoutY="502.0" prefHeight="100.0" prefWidth="829.0">
+         <children>
+
+            <VBox prefHeight="111.0" prefWidth="90.0">
+               <children>
+                  <ImageView fx:id="imageForecastHours_01" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/weather/01d.png" />
+                     </image>
+                  </ImageView>
+                  <HBox prefHeight="30.0" prefWidth="80.0">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="20">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label fx:id="hour1" text="11 am">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_02" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour2" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_03" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour3" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_04" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour4" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_05" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour5" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_06" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour6" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_07" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour7" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_08" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour8" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+
+         <VBox prefHeight="111.0" prefWidth="90.0">
+            <children>
+               <ImageView fx:id="imageForecastHours_09" fitHeight="36.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/weather/01d.png" />
+                  </image>
+               </ImageView>
+               <HBox prefHeight="30.0" prefWidth="80.0">
+                  <VBox.margin>
+                     <Insets left="10.0" />
+                  </VBox.margin>
+                  <children>
+                     <Label text="20">
+                        <font>
+                           <Font size="22.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" text="11">
+                        <font>
+                           <Font size="16.0" />
+                        </font>
+                        <HBox.margin>
+                           <Insets left="10.0" top="5.0" />
+                        </HBox.margin>
+                     </Label>
+                  </children>
+               </HBox>
+               <Label fx:id="hour9" text="11 am">
+                  <VBox.margin>
+                     <Insets left="10.0" top="10.0" />
+                  </VBox.margin>
+                  <font>
+                     <Font name="System Bold" size="12.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+      </HBox>
+
+      <Label fx:id="daily" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="437.0" text="Hourly" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+
+      <Label fx:id="hourly" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="249.0" text="Daily" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="244.0" layoutY="483.0" prefHeight="1.0" prefWidth="829.0" />
+
+      <Separator layoutX="244.0" layoutY="293.0" prefHeight="1.0" prefWidth="829.0" />
+
+      <TextField fx:id="searchField" layoutX="967.0" layoutY="4.0" onAction="#searchCity" prefHeight="38.0" prefWidth="271.0" promptText="Search" />
+
+      <ImageView fx:id="settingsIcon" fitHeight="25" fitWidth="25" layoutX="10.0" layoutY="12.0" onMouseClicked="#settings" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/settings_icon.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="refreshIcon" fitHeight="25" fitWidth="25" layoutX="932.0" layoutY="11.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/refresh_icon.png" />
+         </image>
+      </ImageView>
+
+      <ImageView fx:id="searchIcon" fitHeight="25" fitWidth="25" layoutX="1248.0" layoutY="11.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/search_icon.png" />
+         </image>
+      </ImageView>
+
+      <AnchorPane fx:id="settingsMenu" layoutY="46.0" prefHeight="86.0" prefWidth="131.0" visible="false">
+         <children>
+            <CheckBox fx:id="checkFahrenheit" layoutX="22.0" layoutY="31.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="156.0" text="Fahrenheit">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>

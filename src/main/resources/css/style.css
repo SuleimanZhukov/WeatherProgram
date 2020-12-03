@@ -1,0 +1,29 @@
+.root {
+    -fx-background-image: url("/images/sky_blue.jpg");
+}
+
+#settingsMenu {
+    -fx-background-color:  #68738a;
+}
+
+#searchField {
+    -fx-font-size: 16;
+}
+
+#refreshIcon:hover {
+    -fx-cursor: hand;
+}
+
+#searchIcon:hover {
+    -fx-cursor: hand;
+}
+
+#settingsIcon:hover {
+    -fx-cursor: hand;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+
