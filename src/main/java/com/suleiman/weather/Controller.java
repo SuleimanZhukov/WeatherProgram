@@ -1,8 +1,6 @@
 package com.suleiman.weather;
 
-import org.controlsfx.control.textfield.*;
 import com.google.gson.Gson;
-import com.suleiman.weather.city.CityRequest;
 import com.suleiman.weather.model.WeatherRequest;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -10,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,7 +15,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
-import javafx.stage.Stage;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
